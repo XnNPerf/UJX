@@ -8,8 +8,7 @@
 
     <ItemGroup>
       <PackageReference Include="CounterStrikeSharp.API" Version="1.0.140" />
-    <Reference Include="Modularity">
-      <HintPath>F:\XnN.ProdCS2\addons\counterstrikesharp\api\Modularity.dll</HintPath>
+      <PackageReference Include="Modularity">  Version="2.1.1" />
     </Reference>
     </ItemGroup>
 
