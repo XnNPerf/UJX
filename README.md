@@ -41,4 +41,4 @@ Lang - `addons/counterstrikesharp/plugins/Jumps_X/lang`
 ```
 ![image](https://github.com/XnNPerf/Jumps_X/assets/158213049/73ac2985-7dc4-45db-829d-745fae046e84)
 
-<a href="https://github.com/roflmuffin/CounterStrikeSharp">CounterStrikeSharp</a> Tested v141
+<a href="https://github.com/roflmuffin/CounterStrikeSharp">CounterStrikeSharp</a> Tested v140
