@@ -15,7 +15,7 @@ public class Jumps_X : BasePlugin, IPluginConfig<PluginConfig>
     /*author*/
     public override string ModuleAuthor => "XnN.Prod";
     public override string ModuleName => "Ultimate Jumps X";
-    public override string ModuleVersion => "v0.1.8(realese)";
+    public override string ModuleVersion => "v0.1.9(stable)";
     public override string ModuleDescription => "plugin for BHOP,MG servers.";
     //Setting start
     public static int Setting1 = 2;
