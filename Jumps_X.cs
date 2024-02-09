@@ -6,6 +6,7 @@ using CounterStrikeSharp.API.Modules.Commands;
 using CounterStrikeSharp.API.Modules.Utils;
 using CounterStrikeSharp.API.Modules.Config;
 using CounterStrikeSharp.API.Modules.Admin;
+using System.Drawing;
 using Modularity;
 using CounterStrikeSharp.API.Modules.Entities.Constants;
 
@@ -15,8 +16,8 @@ public class Jumps_X : BasePlugin, IPluginConfig<PluginConfig>
     /*author*/
     public override string ModuleAuthor => "XnN.Prod";
     public override string ModuleName => "Ultimate Jumps X";
-    public override string ModuleVersion => "v0.1.9(stable)";
-    public override string ModuleDescription => "plugin for BHOP,MG servers.";
+    public override string ModuleVersion => "v0.2.0";
+    public override string ModuleDescription => "Plugin for BHOP,MG servers.";
     //Setting start
     public static int Setting1 = 2;
     public int Setting2 = 300;
@@ -31,7 +32,6 @@ public class Jumps_X : BasePlugin, IPluginConfig<PluginConfig>
     private bool isHookEvent;
     private static readonly UserSettings?[] UserSettings = new UserSettings?[120];
     public PluginConfig Config { get; set; }
-
 
     public void OnConfigParsed(PluginConfig config)
     {
@@ -140,6 +140,7 @@ public class Jumps_X : BasePlugin, IPluginConfig<PluginConfig>
     //  Command player
     //  !hud , !scout , !ujx_reload
     /*  */
+
     [RequiresPermissions("@css/root")]
     [ConsoleCommand("css_ujx_reload")]
     public void OnjumpxsCommand(CCSPlayerController? controller, CommandInfo info)
@@ -255,6 +256,9 @@ public class Jumps_X : BasePlugin, IPluginConfig<PluginConfig>
         
         if (!_tries.ContainsKey(player.SteamID))
             _tries.Add(player.SteamID, Scout);
+
+        if (player != null && player.IsValid && player.PlayerPawn != null && player.PlayerPawn.IsValid && player.PlayerPawn.Value != null && player.PlayerPawn.Value.IsValid)
+        player.PlayerPawn.Value.Render = Color.FromArgb(256, 256, 256, 256);   
 
         return HookResult.Continue;
     }
