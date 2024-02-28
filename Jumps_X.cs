@@ -156,6 +156,7 @@ public class Jumps_X : BasePlugin, IPluginConfig<PluginConfig>
         OnConfigParsed(Config);
     }
 
+    /* Временно убрали дабы краши, а так же нет времени исправить 
     [ConsoleCommand("css_hud")]
     public void OnSpeedsCommand(CCSPlayerController? player, CommandInfo info)
     {
@@ -164,7 +165,7 @@ public class Jumps_X : BasePlugin, IPluginConfig<PluginConfig>
         UserSettings[client]!.ShowHUD = !UserSettings[client]!.ShowHUD;
         player.PrintToChat(UserSettings[client]!.ShowHUD ? $"\x10{PluginTag} - \x01HUD: \x06On" : $"\x10{PluginTag} - \x01HUD: \x02Off");
     }
-        
+      */  
     [ConsoleCommand("css_scout")]
     public void OnScoutCommand(CCSPlayerController? player, CommandInfo info)
     {
