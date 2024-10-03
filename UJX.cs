@@ -69,15 +69,12 @@ public partial class UJX : BasePlugin, IPluginConfig<PluginConfig>
         Console.WriteLine($" Plugin version - {ModuleVersion}");
         Console.WriteLine($"-------------- [ ENABLE ] --------------");
         Console.WriteLine($" ConVars Status - ");
-        if (Config.ScoreBoardActive == true)
-        {
-              Console.WriteLine("tags module (-None-)");
-        }
-        else if (Config.ScoreBoardActive == false)
-        {
-             Console.WriteLine("tags module (Enable)");
-        }
-
+        if (Config.ScoreBoardActive == true){ Console.WriteLine("Module TAG-Score - (ENABLE)");} else if (Config.ScoreBoardActive == false){ Console.WriteLine("Module TAG-Score - (None)");}
+        if (Config.ScoutActive == 1){ Console.WriteLine("Module Scout - (ENABLE)");} else if (Config.ScoutActive == 0){ Console.WriteLine("Module Scout - (None)");}
+        if (Config.RespawnActive == 1){ Console.WriteLine("Module Respawn - (ENABLE)");} else if (Config.RespawnActive == 0){ Console.WriteLine("Module Respawn - (None)");}
+        if (Config.HideActive == true){ Console.WriteLine("Module HideLow - (ENABLE)");} else if (Config.HideActive == false){ Console.WriteLine("Module HideLow - (None)");}
+        Console.WriteLine($"----------------------------------------");
+        
 
         RegisterListener<Listeners.OnClientConnected>(((slot) =>
         {
