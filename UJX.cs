@@ -1,14 +1,10 @@
 ﻿using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
-//using System.Text.RegularExpressions;
-//using CounterStrikeSharp.API.Core.Attributes.Registration;
-//using CounterStrikeSharp.API.Modules.Commands;
 using CounterStrikeSharp.API.Modules.Utils;
 using CounterStrikeSharp.API.Modules.Config;
 using CounterStrikeSharp.API.Modules.Admin;
 using System.Drawing;
-//using Modularity;
-//using CounterStrikeSharp.API.Modules.Entities.Constants;
+
 
 namespace UJX;
 public partial class UJX : BasePlugin, IPluginConfig<PluginConfig>
